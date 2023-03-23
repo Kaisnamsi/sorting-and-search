@@ -1,10 +1,18 @@
-procedure insertionSort(A : array of items)
-n = length(A)
-for i = 1 to n-1 do
-j = i-1
-while j >= 0 and A[j+1] < A[j] do
-swap(A[j+1], A[j])
-j = j-1
-end while
-end for
-end procedure
+ALGORITHM insertion
+VAR
+tab:ARRAY_OF integer;
+temp:integer;
+i,j: integer;
+
+BEGIN
+i:=0;
+WHILE (i>=0) DO
+temp:=tab[i];
+WHILE (j>=0 AND tab[j]>temp) DO
+tab[j+1]:=tab[j];
+j:=j-1
+END_WHILE
+tab[j]:=temp;
+i:=i+1  
+END_WHILE
+END
